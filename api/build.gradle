@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group = 'ya.yahia.microservices.api'
+group = 'se.magnus.microservices.api'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '17'
 
@@ -12,17 +12,15 @@ repositories {
 }
 
 ext {
-    springBootVersion = '3.2.4'
+    springBootVersion = '3.0.4'
 }
 
 dependencies {
     implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
-    implementation 'org.springdoc:springdoc-openapi-starter-common:2.5.0'
-
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springdoc:springdoc-openapi-starter-common:2.0.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
 }
 
 tasks.named('test') {
